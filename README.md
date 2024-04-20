@@ -16,3 +16,7 @@ While .. I will include it alongside Lordville...
 
 
 # Linear Regression Analysis on Log-Log Scale of Mean Discharge (ft^3/s) vs. Mean Stage-height (ft)
+
+## Linear model summary
+
+## Linear regression on log-log scale of Discharge vs. Stage-height
