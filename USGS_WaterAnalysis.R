@@ -3,7 +3,7 @@
 ### Site ID: 02483000
 
 #Importing USGS Daily Data into RStudio
-usgsDailyData=read.table("https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=02483000&referred_module=sw&period&begin_date=1900-01-01&end_date=2017-01-01", header=T, sep= "\t")
+usgsDailyData=read.table("https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=02483000&referred_module=sw&period&begin_date=1900-01-01&end_date=2024-01-01", header=T, sep= "\t")
 
 #Remove unnecessary top row
 usgsDailyData=usgsDailyData[-c(1),]
@@ -96,9 +96,9 @@ plot(lm)
 summary(lm)
 
 #Create linear regression line conditions (from summary)
-LinearReg_Intercept=-14.62832
-LinearReg_Slope=7.38662
-LinearReg_RSquared=0.8155
+LinearReg_Intercept=-14.40532
+LinearReg_Slope=7.33142
+LinearReg_RSquared=0.8273
 
 #Setup and visualize discharge vs height (including log-scale)
 par(mfrow = c(1,2))
@@ -109,4 +109,4 @@ plot(logmeand,logstageh, xlab="log(Mean Discharge [ft3/s])",
 
 #Add in linear regression line
 abline(lm(logstageh ~ logmeand), col="red")
-text(x=4, y=3.4, label="Y= 7.38662*X + (-14.62832)")
+text(x=4, y=3.4, label="Y= 7.33142*X + (-14.40532)")
