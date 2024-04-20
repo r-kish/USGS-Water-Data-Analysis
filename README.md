@@ -1,5 +1,7 @@
 # USGS Water Data Analysis
-
+- [Flow Rate Analysis](#mean-discharge-(flow-rate)-analysis)
+- [Linear Regression Analysis](#linear-regression-analysis-on-log-log-scale-of-mean-discharge-(ft^3/s)-vs.-mean-stage-height-(ft))
+  
 Fluid mechanics:
 
 ### USGS Raw Water Data Links:
