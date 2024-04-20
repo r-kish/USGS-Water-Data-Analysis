@@ -1,8 +1,11 @@
 # USGS Water Data Analysis
+Contents
+- [Introduction](Intro)
 - [Flow Rate Analysis](#mean-discharge-(flow-rate)-analysis)
 - [Linear Regression Analysis](#linear-regression-analysis-on-log-log-scale-of-mean-discharge-(ft^3/s)-vs.-mean-stage-height-(ft))
   
-Fluid mechanics:
+# Introduction
+Info here
 
 ### USGS Raw Water Data Links:
 - [Delaware River @ Lordville, NY (Site 01427207)](https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=01427207&referred_module=sw&period&begin_date=1900-01-01&end_date=2024-01-01) July 28th, 2006 - January 1st, 2024 (Part 1)
