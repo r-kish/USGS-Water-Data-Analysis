@@ -45,12 +45,12 @@ Additionally, I've calculated the mean discharge at the 25th, 75th, 90th, and 99
 
 
 ## Density Plots of Discharge (Flow Rate)
-To get a better visual of how the mean daily discharge is distributed across the entirety of the historical data availble, I've created density plots for each of the bodies of water. 
+To get a better visual of how the mean daily discharge is distributed across the entirety of the historical data availble, I've created density plots for each of the bodies of water. The Tuscolameta Creek data is much more dense than the Delaware River, with high outliers being more extreme than that of the Delaware as well. Even though the Tuscolameta Creek is much smaller than the Delaware River at the locations the data was recorded, the Tuscolameta's maximum flow rates were sometimes nearly as that of the maximums of the Delaware.
 
-### Lordville
+### Delaware River @ Lordville
 ![LordvilleDensity](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LordvilleDensity.png)
 
-### Walnut Grove
+### Tuscolameta Creek @ Walnut Grove
 ![WalnutGroveDensity](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGroveDensity.png)
 
 
