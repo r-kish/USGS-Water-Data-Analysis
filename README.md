@@ -25,28 +25,43 @@ The analysis is broken down into three sections:
 ## Mean Discharge (Flow Rate) [ft^3/s] Statistics
 The flow rate is determined by the volume of fluid that passes a point in a specified amount of time. Data is pulled from the entirety of available data for both bodies of water, and the average, medium, minimum, maximum, and standard deviation are calculated.
 
-### Lordvile
+### Delaware River @ Lordvile
 ![LordvilleStats](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LordvilleDischarge.png)
 
-### Walnut Grove
+### Tuscolameta Creek @ Walnut Grove
 ![WalnutGroveStats](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGroveDischarge.png)
 
 As the Delaware River is a bigger body of water than the Tuscolameta, it makes sense that the Lordville stats are greater than the Walnut Grove stats. Although the Walnut Grove historical data going as far back as 1974, whereas the Lordville data only going back to 2006 could leave room for discrepancy if trying to use this data in a correlational study between the two bodies of water.
 
 ## Mean Discharge (Flow Rate) [ft^3/s] Percentiles
+Additionally, I've calculated the mean discharge at the 25th, 75th, 90th, and 99th percentile for each body of water. Again, this data is taken from the entirety of all data available for each body of water.
+
+### Delaware River @ Lordville
+![LordvillePercentiles](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LordvillePercentiles.png)
+
+### Tuscolameta Creek @ Walnut Grove
+![WalnutGrovePercentiles](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGrovePercentiles.png)
 
 
 ## Mean Daily Discharge Time Series (November 2006)
 The data in this section was taken from November 1st, 2006 - November 30th, 2006. The daily mean discharge of both bodies of water is visualized, showing how the flow rate behavior changes over the course of the month. Changes in flow rate for both bodies of water can be the cause of weather; however, in the case of the Delaware River @ Lordville, the release of the Cannonsville Reservoir may have also contributed to changes in flow rate.
 
-### Lordville
+### Delaware River @ Lordville
 ![Lordville](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/Lordville2006.png)
 
-### Walnut Grove
+### Tuscolameta Creek @ Walnut Grove
 ![Walnut Grove](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGrove2006.png)
 
-# Linear Regression Analysis on Log-Log Scale of Mean Discharge (ft^3/s) vs. Mean Stage-height (ft)
+# Linear Regression Analysis on Log-Log Scale of Mean Discharge (ft^3/s) vs. Mean Height (ft)
 
-## Linear model summary
+## Linear Model Summary for Tuscolameta Creek @ Walnut Grove
 
-## Linear regression on log-log scale of Discharge vs. Stage-height
+### Summary Part 1: Residuals vs. Fitted Values and Quantile-Quantile Residuals 
+![Summary1](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/ResFit_QQRes.png)
+
+### Scale-Location of Square Root of Residuals vs. Fitted Values and Residuals vs. Leverages
+![Summary2](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/ScaleLocFit_CookDistLeverage.png)
+
+## Linear Regression on Log-log Scale of Discharge vs. Stage-height of Tuscolameta Creek
+
+![Plot](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/FlowVsHeight.png)
