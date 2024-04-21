@@ -16,9 +16,14 @@ This project derives from a project I had been working on during my time studyin
 
 
 # Mean Discharge (Flow Rate) Analysis
-While .. I will include it alongside Lordville...
+This portion of the study will focus on the mean discharge (flow rate) of both bodies of water: the Delaware River, and the Tuscolameta Creek.
+The analysis is broken down into three sections:
+- Flow Rate Statistics Report
+- Flow Rate Percentiles
+- Daily Flow Rate Time Series (November 2006)
 
 ## Mean Discharge (Flow Rate) [ft^3/s] Statistics
+The flow rate is determined by the volume of fluid that passes a point in a specified amount of time. Data is pulled from the entirety of available data for both bodies of water, and the average, medium, minimum, maximum, and standard deviation are calculated.
 
 ### Lordvile
 ![LordvilleStats](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LordvilleDischarge.png)
@@ -26,10 +31,13 @@ While .. I will include it alongside Lordville...
 ### Walnut Grove
 ![WalnutGroveStats](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGroveDischarge.png)
 
+As the Delaware River is a bigger body of water than the Tuscolameta, it makes sense that the Lordville stats are greater than the Walnut Grove stats. Although the Walnut Grove historical data going as far back as 1974, whereas the Lordville data only going back to 2006 could leave room for discrepancy if trying to use this data in a correlational study between the two bodies of water.
+
 ## Mean Discharge (Flow Rate) [ft^3/s] Percentiles
 
 
 ## Mean Daily Discharge Time Series (November 2006)
+The data in this section was taken from November 1st, 2006 - November 30th, 2006. The daily mean discharge of both bodies of water is visualized, showing how the flow rate behavior changes over the course of the month. Changes in flow rate for both bodies of water can be the cause of weather; however, in the case of the Delaware River @ Lordville, the release of the Cannonsville Reservoir may have also contributed to changes in flow rate.
 
 ### Lordville
 ![Lordville](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/Lordville2006.png)
