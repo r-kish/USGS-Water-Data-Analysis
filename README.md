@@ -20,6 +20,7 @@ This portion of the study will focus on the mean discharge (flow rate) of both b
 The analysis is broken down into three sections:
 - Flow Rate Statistics Report
 - Flow Rate Percentiles
+- Density Plots of Flow Rate
 - Daily Flow Rate Time Series (November 2006)
 
 ## Mean Discharge (Flow Rate) [ft^3/s] Statistics
@@ -33,6 +34,7 @@ The flow rate is determined by the volume of fluid that passes a point in a spec
 
 As the Delaware River is a bigger body of water than the Tuscolameta, it makes sense that the Lordville stats are greater than the Walnut Grove stats. Although the Walnut Grove historical data going as far back as 1974, whereas the Lordville data only going back to 2006 could leave room for discrepancy if trying to use this data in a correlational study between the two bodies of water.
 
+
 ## Mean Discharge (Flow Rate) [ft^3/s] Percentiles
 Additionally, I've calculated the mean discharge at the 25th, 75th, 90th, and 99th percentile for each body of water. Again, this data is taken from the entirety of all data available for each body of water.
 
@@ -41,6 +43,16 @@ Additionally, I've calculated the mean discharge at the 25th, 75th, 90th, and 99
 
 ### Tuscolameta Creek @ Walnut Grove
 ![WalnutGrovePercentiles](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGrovePercentiles.png)
+
+
+## Density Plots of Discharge (Flow Rate)
+To get a better visual of how the mean daily discharge is distributed across the entirety of the historical data availble, I've created density plots for each of the bodies of water. 
+
+### Lordville
+![LordvilleDensity](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LordvilleDensity.png)
+
+### Walnut Grove
+![WalnutGroveDensity](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGroveDensity.png)
 
 
 ## Mean Daily Discharge Time Series (November 2006)
