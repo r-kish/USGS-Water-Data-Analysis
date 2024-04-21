@@ -5,10 +5,9 @@
 - [Linear Regression Analysis](#linear-regression-analysis-on-log-log-scale-of-mean-discharge-(ft^3/s)-vs.-mean-stage-height-(ft))
   
 # Introduction <img width = 400, align="right" src= "https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/RawData.png">
-This project derives from a project I had been working on during my time studying civil engineering, and relies on publicly accessible from [USGS Water Data](https://waterdata.usgs.gov/nwis) in order to analyze the behavior of bodies of water recorded by USGS. I specifically focus on the flow rate (discharge) of the Delaware River at Lordville, NY, and both the flow rate and height of the Tusolameta Creek at Walnut Grove, MS using historical data. 
+This project derives from a project I had been working on during my time studying civil engineering, and relies on publicly accessible from [USGS Water Data](https://waterdata.usgs.gov/nwis) (see image on right of raw data) in order to analyze the behavior of bodies of water recorded by USGS. I specifically focus on the flow rate (discharge) of the Delaware River at Lordville, NY, and both the flow rate and height of the Tusolameta Creek at Walnut Grove, MS using historical data. 
 
 ### USGS Raw Water Data Links:
-- (Example of data format on right)
 - [Delaware River @ Lordville, NY (Site 01427207)](https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=01427207&referred_module=sw&period&begin_date=1900-01-01&end_date=2024-01-01) July 28th, 2006 - January 1st, 2024 (Part 1)
     - [Main USGS site for Lordville](https://waterdata.usgs.gov/monitoring-location/01427207/#parameterCode=00065&period=P7D&showMedian=false)
 - [Tuscolameta Creek @ Walnut Grove, MS (Site 02483000)](https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=02483000&referred_module=sw&period&begin_date=1900-01-01&end_date=2024-01-01) August 28th, 1974 - January 1st, 2024 (Part 1 & 2)
