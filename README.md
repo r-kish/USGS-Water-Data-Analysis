@@ -25,7 +25,7 @@ The analysis is broken down into three sections:
 ## Mean Discharge (Flow Rate) [ft^3/s] Statistics
 The flow rate is determined by the volume of fluid that passes a point in a specified amount of time (V/t). Data is pulled from the entirety of available data for both bodies of water, and the average, medium, minimum, maximum, and standard deviation are calculated.
 
-### Delaware River @ Lordvile
+### Delaware River @ Lordville
 ![LordvilleStats](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LordvilleDischarge.png)
 
 ### Tuscolameta Creek @ Walnut Grove
