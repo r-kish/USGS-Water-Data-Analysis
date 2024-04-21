@@ -1,6 +1,7 @@
 ### USGS Water Data Analysis - Tuscolameta Creek @ Walnut Grove, Mississippi
 ### Richard Kish
 ### Site ID: 02483000
+library(ggplot2)
 
 #Importing USGS Daily Data into RStudio
 usgsDailyData=read.table("https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=02483000&referred_module=sw&period&begin_date=1900-01-01&end_date=2024-01-01", header=T, sep= "\t")
@@ -70,9 +71,14 @@ Mean_Discharge_Percentiles[1,4] = quantile(doubledischarge,0.99,na.rm=T)
 
 print(Mean_Discharge_Percentiles)
 
-#Get time series of 1 month of flow rate
-library(ggplot2)
+#Density plot of Tuscolameta Creek Discharge throughout history
+doubledischarge <- data.frame(doubledischarge)
+ggplot(doubledischarge, aes(x = doubledischarge)) +
+  geom_density(fill = "red", alpha = 0.8) +
+  xlab("Discharge (Flow Rate) [ft^3/s]") +
+  ggtitle("Density of Tuscolameta Creek Discharge")
 
+#Get time series of 1 month of flow rate
 usgsDailyDataSub <- usgsDailyData_Filtered %>% slice(11755:11784)
 usgsDailyDataSub[4] <- lapply(usgsDailyDataSub[4], as.numeric)
 ggplot(data=usgsDailyDataSub, aes(x=datetime, y=`Mean Discharge [ft3/s]`, group=1)) +

@@ -1,6 +1,7 @@
 ### USGS Water Data Analysis - Delaware River @ Lordville, New York ###
 ### Richard Kish
 ### Site ID: 01427207
+library(ggplot2)
 
 #Importing USGS Daily Data into RStudio (Delaware @ Lordville)
 usgsDailyData = read.table("https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=01427207&referred_module=sw&period&begin_date=1900-01-01&end_date=2024-01-01", header=T, sep= "\t")
@@ -62,9 +63,14 @@ Mean_Discharge_Percentiles[1,4] = quantile(doubledischarge,0.99,na.rm=T)
 
 print(Mean_Discharge_Percentiles)
 
-#Get time series of 1 month of flow rate
-library(ggplot2)
+#Density plot of Delaware River Discharge throughout history
+doubledischarge <- data.frame(doubledischarge)
+ggplot(doubledischarge, aes(x = doubledischarge)) +
+  geom_density(fill = "blue", alpha = 0.8) +
+  xlab("Discharge (Flow Rate) [ft^3/s]") +
+  ggtitle("Density of Delaware River Discharge")
 
+#Get time series of 1 month of flow rate
 usgsDailyDataSub <- usgsDailyData_Filtered %>% slice(98:127)
 usgsDailyDataSub[3] <- lapply(usgsDailyDataSub[3], as.numeric)
 ggplot(data=usgsDailyDataSub, aes(x=datetime, y=`Mean Discharge [ft3/s]`, group=1)) +
