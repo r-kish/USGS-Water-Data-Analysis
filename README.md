@@ -23,7 +23,7 @@ The analysis is broken down into three sections:
 - Daily Flow Rate Time Series (November 2006)
 
 ## Mean Discharge (Flow Rate) [ft^3/s] Statistics
-The flow rate is determined by the volume of fluid that passes a point in a specified amount of time. Data is pulled from the entirety of available data for both bodies of water, and the average, medium, minimum, maximum, and standard deviation are calculated.
+The flow rate is determined by the volume of fluid that passes a point in a specified amount of time (V/t). Data is pulled from the entirety of available data for both bodies of water, and the average, medium, minimum, maximum, and standard deviation are calculated.
 
 ### Delaware River @ Lordvile
 ![LordvilleStats](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LordvilleDischarge.png)
@@ -53,8 +53,13 @@ The data in this section was taken from November 1st, 2006 - November 30th, 2006
 ![Walnut Grove](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/WalnutGrove2006.png)
 
 # Linear Regression Analysis on Log-Log Scale of Mean Discharge (ft^3/s) vs. Mean Height (ft)
+Since the Delaware River @ Lordville data does not contain historical data for the mean height- so I have left it out of this portion of the study. However, the Tuscolameta Creek data has both mean discharge and mean height data available, so this will be the only body of water in discussion for this section.
 
-## Linear Model Summary for Tuscolameta Creek @ Walnut Grove
+After the linear model was created using the log of both the mean discharge, and mean stage-height, the following summary was created:
+
+![Summary](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/LogSummary.png)
+
+These values are used to construct the formula for the linear regression line for the log-log scale comparison of discharge v. height. The next four plots were derived from the linear model summary calculation.
 
 ### Summary Part 1: Residuals vs. Fitted Values and Quantile-Quantile Residuals 
 ![Summary1](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/ResFit_QQRes.png)
@@ -62,6 +67,13 @@ The data in this section was taken from November 1st, 2006 - November 30th, 2006
 ### Scale-Location of Square Root of Residuals vs. Fitted Values and Residuals vs. Leverages
 ![Summary2](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/ScaleLocFit_CookDistLeverage.png)
 
+### As per the documentation for the lm() function in R:
+- The Q-Q plot is based on the absolute value of the standardized deviance residuals. When the saddlepoint approximation applies, these have an approximate half-normal distribution.
+- The ‘Scale-Location’ plot (which=3), also called ‘Spread-Location’ or ‘S-L’ plot, takes the square root of the absolute residuals in order to diminish skewness.
+- The Residual-Leverage plot (which=5) shows contours of equal Cook's distance, for values of cook.levels (by default 0.5 and 1) and omits cases with leverage one with a warning.
+    - If the leverages are constant (as is typically the case in a balanced aov situation) the plot uses factor level combinations instead of the leverages for the x-axis. (The factor levels are ordered by mean fitted value.)
+
 ## Linear Regression on Log-log Scale of Discharge vs. Stage-height of Tuscolameta Creek
+Here, the actual discharge vs. stage-height is displayed alongside the log-log scale of the same comparison. A linear regression line was calculated from the linear model summary report (see above) and has been added to the log-log graph.
 
 ![Plot](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/FlowVsHeight.png)
