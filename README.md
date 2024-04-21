@@ -61,10 +61,10 @@ After the linear model was created using the log of both the mean discharge, and
 
 These values are used to construct the formula for the linear regression line for the log-log scale comparison of discharge v. height. The next four plots were derived from the linear model summary calculation.
 
-### Summary Part 1: Residuals vs. Fitted Values and Quantile-Quantile Residuals 
+### Summary Part 1: Residuals vs. Fitted Values | Quantile-Quantile Residuals 
 ![Summary1](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/ResFit_QQRes.png)
 
-### Scale-Location of Square Root of Residuals vs. Fitted Values and Residuals vs. Leverages
+### Scale-Location of Square Root of Residuals vs. Fitted Values | Residuals vs. Leverages
 ![Summary2](https://github.com/r-kish/USGS-Water-Data-Analysis/blob/main/images/ScaleLocFit_CookDistLeverage.png)
 
 ### As per the documentation for the lm() function in R:
