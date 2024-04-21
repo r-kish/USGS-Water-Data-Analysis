@@ -61,3 +61,12 @@ Mean_Discharge_Percentiles[1,3] = quantile(doubledischarge,0.90,na.rm=T)
 Mean_Discharge_Percentiles[1,4] = quantile(doubledischarge,0.99,na.rm=T)
 
 print(Mean_Discharge_Percentiles)
+
+#Get time series of 1 month of flow rate
+library(ggplot2)
+
+usgsDailyDataSub <- usgsDailyData_Filtered %>% slice(98:127)
+usgsDailyDataSub[3] <- lapply(usgsDailyDataSub[3], as.numeric)
+ggplot(data=usgsDailyDataSub, aes(x=datetime, y=`Mean Discharge [ft3/s]`, group=1)) +
+  geom_line()+
+  geom_point() + ggtitle("Flow rate of Delaware River @ Lordville November 2006")

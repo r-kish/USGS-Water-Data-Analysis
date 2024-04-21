@@ -70,10 +70,19 @@ Mean_Discharge_Percentiles[1,4] = quantile(doubledischarge,0.99,na.rm=T)
 
 print(Mean_Discharge_Percentiles)
 
+#Get time series of 1 month of flow rate
+library(ggplot2)
+
+usgsDailyDataSub <- usgsDailyData_Filtered %>% slice(11755:11784)
+usgsDailyDataSub[4] <- lapply(usgsDailyDataSub[4], as.numeric)
+ggplot(data=usgsDailyDataSub, aes(x=datetime, y=`Mean Discharge [ft3/s]`, group=1)) +
+  geom_line()+
+  geom_point() + ggtitle("Flow rate of Tuscolameta Creek @ Walnut Grove November 2006")
+
 
 ###Linear regression analysis on Log-Log scale Mean Discharge [ft3/s] vs Mean Stage-height [ft]
 
-#4.1.1/4.1.2
+#Setup new dataframe for linear regression analysis
 usgsDailyData_Filtered_2=usgsDailyData_Filtered
 usgsDailyData_Filtered_2[usgsDailyData_Filtered_2==""]=NA
 usgsDailyData_Filtered_2=na.omit(usgsDailyData_Filtered_2)
