@@ -2,6 +2,8 @@
 ### Richard Kish
 ### Site ID: 01427207
 library(ggplot2)
+library(dplyr)
+library(tidyverse)
 
 #Importing USGS Daily Data into RStudio (Delaware @ Lordville)
 usgsDailyData = read.table("https://waterdata.usgs.gov/nwis/dv?cb_00060=on&cb_00065=on&format=rdb&site_no=01427207&referred_module=sw&period&begin_date=1900-01-01&end_date=2024-01-01", header=T, sep= "\t")
